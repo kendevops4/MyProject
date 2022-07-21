@@ -18,9 +18,9 @@ pipeline {
         
         stage('Quality Gate') {
             steps {
-                waitForQualityGate abortPipeline: true, credentialsId: 'sonar-cred'
-            }
-        }
+                waitForQualityGate abortPipeline: true, credentialsId: 'sonar-cred'
+            }
+        }
         
         stage('Build with Maven') {
             steps {
